@@ -30,10 +30,12 @@ RUN apt-get update && apt-get install -y \
   whois \
   curl \
   python2.7 \
-  python-serial && \
+  python-serial \
+  zlib-dev && \
   cd /tmp && \ 
   curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && \
   pip install https://github.com/pklaus/brother_ql/archive/master.zip && \
+  apt-get purge -y zlib-dev && \ 
   rm -rf /root/.cache && \
   apt-get install -y vim && \
   apt-get autoremove -y && \ 
