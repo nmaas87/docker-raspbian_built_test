@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
   whois \
   curl \
   python2.7 \
-  python-serial \
+  python-serial && \
   cd /tmp && \ 
   curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && \
   pip install https://github.com/pklaus/brother_ql/archive/master.zip && \
