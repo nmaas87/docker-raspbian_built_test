@@ -31,11 +31,11 @@ RUN apt-get update && apt-get install -y \
   curl \
   python2.7 \
   python-serial \
-  zlib-dev && \
+  zlib1g-dev && \
   cd /tmp && \ 
   curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && \
   pip install https://github.com/pklaus/brother_ql/archive/master.zip && \
-  apt-get purge -y zlib-dev && \ 
+  apt-get purge -y zlib1g-dev && \ 
   rm -rf /root/.cache && \
   apt-get install -y vim && \
   apt-get autoremove -y && \ 
